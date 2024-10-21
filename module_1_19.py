@@ -8,3 +8,11 @@ print(my_dict)
 a=my_dict.pop('Alexandr')
 print(my_dict)
 print(a)
+
+my_set = {12,35,12,'school',35,'appel','school'}
+print(my_set)
+print(my_set.add(10))
+print(my_set.add(25))
+print(my_set)
+print(my_set.discard(12))
+print(my_set)
