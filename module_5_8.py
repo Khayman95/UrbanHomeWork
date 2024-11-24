@@ -18,7 +18,7 @@ class House:
 
 h1 = House('Колизей', 12)
 h2 = House('Адмиралтейский', 3)
-print(len(h1))
-print(len(h2))
 print(h1)
 print(h2)
+print(len(h1))
+print(len(h2))
