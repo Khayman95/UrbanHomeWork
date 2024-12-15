@@ -1,15 +1,13 @@
 class Vheicle:
     owner = []
-    __model = []
-    __engine_power = []
-    __color = []
+
     __COLOR_VARIANS = ['Красный','Черный','Зеленый','Белый','Синий']
 
-    def __init__(self, owner, __model, __color, __engine_power):
+    def __init__(self, owner, model, color, engine_power):
         self.owner = owner
-        self.__model = __model
-        self.__engine_power = __engine_power
-        self.__color = __color
+        self.__model = model
+        self.__engine_power = engine_power
+        self.__color = color
 
     def get_model(self):
         return (f'Модель: {self.__model}')
@@ -27,7 +25,8 @@ class Vheicle:
         print(f'Владелец: {self.owner}')
 
     def set_color(self, new_color):
-        if new_color in self.__COLOR_VARIANS:
+        stra = ''.join(self.__COLOR_VARIANS)
+        if new_color.lower() in stra.lower():
             self.__color = new_color
             return self.__color
         else:
