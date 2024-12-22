@@ -1,10 +1,10 @@
 class Vheicle:
-    owner = []
+    _owner = []
 
     __COLOR_VARIANS = ['Красный','Черный','Зеленый','Белый','Синий']
 
     def __init__(self, owner, model, color, engine_power):
-        self.owner = owner
+        self._owner = owner
         self.__model = model
         self.__engine_power = engine_power
         self.__color = color
@@ -22,11 +22,10 @@ class Vheicle:
         print(self.get_model())
         print(self.get_horsepower())
         print(self.get_color())
-        print(f'Владелец: {self.owner}')
+        print(f'Владелец: {self._owner}')
 
     def set_color(self, new_color):
-        stra = ''.join(self.__COLOR_VARIANS)
-        if new_color.lower() in stra.lower():
+        if new_color.lower() in [color.lower() for color in self.__COLOR_VARIANS]:
             self.__color = new_color
             return self.__color
         else:
@@ -43,6 +42,6 @@ vehicle1.set_color('Розовый')
 
 vehicle1.set_color('Черный')
 
-vehicle1.owner = 'Vasyok'
+vehicle1._owner = 'Vasyok'
 
 vehicle1.print_info()
